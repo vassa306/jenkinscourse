@@ -9,9 +9,9 @@ pipeline {
 	 	steps {						
              echo 'Hello'
 	    }
-	}
-  }
-}
+    }
+ }
+
 
 
 			
