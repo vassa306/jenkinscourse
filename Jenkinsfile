@@ -1,18 +1,14 @@
 pipeline {
-  agent none 
+  agent any
 	stages {
 	   stage('Build') {
-		 agent any
-		 //options {
-			//skipDefaultCheckout()
-	 	steps {						
-             echo 'Hello'
+		    when{
+              changelog '.*some_text.*'
+        }
+
+	 	steps {
+             echo 'Hello World Changelog'
 	    }
     }
   }
 }
-
-
-
-			
-		
