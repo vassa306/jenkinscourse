@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             when {
-                changelog '.*some_text.*'
+               changeRequest()
             }
 
             steps {
-                echo 'Hello World Changelog ni'
+                echo 'Running because change request exists'
             }
         }
     }
