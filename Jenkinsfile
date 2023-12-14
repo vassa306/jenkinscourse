@@ -1,18 +1,14 @@
 pipeline {
-  agent none 
-	stages {
-	   stage(Build) {
-		 agent any
-		 options {
-			skipDefaultCheckout()
-	   }
-	 	steps {						
-             echo 'Hello'
-	    }
-	}
-  }
+    agent any
+    stages {
+        stage('Build') {
+            when {
+               changeRequest()
+            }
+
+            steps {
+                echo 'Running because change request exists'
+            }
+        }
+    }
 }
-
-
-			
-		
