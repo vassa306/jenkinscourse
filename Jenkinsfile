@@ -7,7 +7,7 @@ pipeline {
             }
 
             steps {
-                echo 'Hello World Changelog'
+                echo 'Hello World Changelog ni'
             }
         }
     }
